@@ -19,9 +19,10 @@
 	</th:block>
 
 	<div class="row">
-		<div class="bs-component col-sm-12">
+		<div class="bs-component col-sm-12" >
 
 			<form th:action="@{/attendance/update}" method="post">
+				<div style="height: 400px; overflow-y: scroll;">
 				<table class="table table-hover dataTable no-footer">
 					<thead>
 						<tr>
@@ -34,6 +35,7 @@
 							<th class="w240">備考</th>
 						</tr>
 					</thead>
+					
 					<tbody>
 						<th:block th:each="dailyAttendanceForm, stat : *{attendanceForm.attendanceList}">
 							<tr>
@@ -68,8 +70,9 @@
 							</tr>
 						</th:block>
 					</tbody>
+					
 				</table>
-
+</div>
 				<div class="form-group">
 					<th:block th:if="${session.loginUserDto.role == '0001'}">
 						<a th:href="@{/attendance/detail}" class="btn btn-default">戻る</a>
