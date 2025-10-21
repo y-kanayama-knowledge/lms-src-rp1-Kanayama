@@ -24,7 +24,7 @@ import jp.co.sss.lms.util.Constants;
 @Controller
 @RequestMapping("/attendance")
 public class AttendanceController {
-
+//git確認要
 	@Autowired
 	private StudentAttendanceService studentAttendanceService;
 	@Autowired

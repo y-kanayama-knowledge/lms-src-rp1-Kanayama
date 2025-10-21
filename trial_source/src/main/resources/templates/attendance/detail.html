@@ -33,9 +33,9 @@
 				<small id="now"></small>
 			</div>
 			<div class="form-group">
-				<form th:action="@{/attendance/detail}" method="post" class="form-inline onclick="window.confirm('これが確認ダイアログです。');">
-					<input type="submit" value="出勤" name="punchIn" class="btn btn-default" />
-					<input type="submit" value="退勤" name="punchOut" class="btn btn-default" />
+				<form th:action="@{/attendance/detail}" method="post" class="form-inline" >
+					<input type="submit" value="出勤" name="punchIn" class="btn btn-default" onclick="return window.confirm('打刻します。よろしいですか？');"/>
+					<input type="submit" value="退勤" name="punchOut" class="btn btn-default" onclick="return window.confirm('打刻します。よろしいですか？');"/>
 				</form>
 			</div>
 			<p><a th:href="@{/attendance/update}">勤怠情報を直接編集する</a></p>
